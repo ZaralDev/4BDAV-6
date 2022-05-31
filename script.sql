@@ -136,7 +136,13 @@ TRUNCATE TABLE cli;
 -- EXERCICE 2 :
 
 -- 1. Instalation Oracle SQL DEVELOPER : ok
--- 2. Port 1521 : ouvert
+-- 2. Port 1521 : ok
 -- 3. Nombre de core et taille de RAM de la vm : ok
--- 4. 
+-- 4. Connexion schéma HR : ok
+-- 5. Décrire objet : ok
+-- 6. Générer DDL : ok
+-- 7. Reverse engineering du modèle relationnel : ok
 
+
+
+-- EXERCICE 3 :
