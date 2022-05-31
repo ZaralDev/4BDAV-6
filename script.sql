@@ -1,11 +1,12 @@
-Création utilisateur 
+-- EXERCICE 1 :
+
+-- Création utilisateur 
 
 create user marchese identified by oracle;
 grant all privileges to marchese;
 
 
-
-Création des tables
+-- 2. Création des tables
 
 CREATE TABLE CLI
 (NumCli integer PRIMARY KEY,
@@ -50,13 +51,11 @@ Remise VARCHAR2(30)
 );
 
 
+-- 3. Oui il y a un ordre a respecter pour pouvoir assigner les clés étrangeres, si l'ordre n'est pas respecter nous n'aurions pas pu assigner les clés étrangères
+-- ordre : CLI, COM, FOU, PRO, DET
 
 
-3. Oui il y a un ordre a respecter pour pouvoir assigner les clés étrangeres
-
-
-
-4. sqlplus
+-- 4. SQL*plus
 
 SQL> desc cli;
  Name					   Null?    Type
@@ -68,8 +67,6 @@ SQL> desc cli;
  VILLE						    VARCHAR2(30)
  DEPT						    VARCHAR2(30)
  NAT						    VARCHAR2(30)
-
-
 
  SQL> desc com;
   Name					   Null?    Type
@@ -129,6 +126,8 @@ insert into det values(1, 1, 't', 't');
 insert into det values(2, 2, 't', 't');
 
 
+-- 5. Vider les tables
+-- Oui l'ordre est important si il est pas respecter on risque de casser les clés étrangères
 
 TRUNCATE TABLE det;
 TRUNCATE TABLE pro;
@@ -136,9 +135,7 @@ TRUNCATE TABLE fou;
 TRUNCATE TABLE com;
 TRUNCATE TABLE cli;
 
-
-
-Oui pour ne pas casser les clés étrangeres
+-- EXERCICE 2 :
 
 
 
