@@ -5,7 +5,7 @@
 create user marchese identified by oracle;
 grant all privileges to marchese;
 
-
+-- 1. Créer repo GitHub : ok
 -- 2. Création des tables
 
 CREATE TABLE CLI
@@ -17,7 +17,6 @@ Ville VARCHAR2(30),
 Dept VARCHAR2(30),
 Nat VARCHAR2(30)
 );
-
 
 CREATE TABLE COM 
 (NumCom integer PRIMARY KEY,
@@ -42,7 +41,6 @@ TypePro VARCHAR2(30),
 PrixUnit VARCHAR2(30)
 );
 
-
 CREATE TABLE DET  
 (NumCom integer PRIMARY KEY REFERENCES COM  (NumCom),
 NumPro integer REFERENCES PRO  (NumPro), 
@@ -50,10 +48,8 @@ Qte VARCHAR2(30),
 Remise VARCHAR2(30)
 );
 
-
 -- 3. Oui il y a un ordre a respecter pour pouvoir assigner les clés étrangeres, si l'ordre n'est pas respecter nous n'aurions pas pu assigner les clés étrangères
 -- ordre : CLI, COM, FOU, PRO, DET
-
 
 -- 4. SQL*plus
 
@@ -135,7 +131,12 @@ TRUNCATE TABLE fou;
 TRUNCATE TABLE com;
 TRUNCATE TABLE cli;
 
+
+
 -- EXERCICE 2 :
 
-
+-- 1. Instalation Oracle SQL DEVELOPER : ok
+-- 2. Port 1521 : ouvert
+-- 3. Nombre de core et taille de RAM de la vm : ok
+-- 4. 
 
