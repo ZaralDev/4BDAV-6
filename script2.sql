@@ -114,3 +114,14 @@ CREATE TABLE PILOTE (
     Ville VARCHAR(30),
     Age NUMBER,
     Salaire NUMBER);
+
+insert into pilote values('1','JEAN PAUL','Rennes', 45, 5000);
+insert into pilote values('2','JEAN LUC','Rennes', 50, 3500);
+insert into pilote values('3','LOUIS','Rennes', 35, 4800);
+insert into pilote values('4','LUCAS','Rennes', 46, 4600);
+insert into pilote values('5','SAMUEL','Rennes', 51, 8200);
+insert into pilote values('6','LUCAS','Rennes', 35, 3700);
+insert into pilote values('7','QUENTIN','Rennes', 48, 4000);
+insert into pilote values('8','JEAN','Rennes', 52, 2500);
+insert into pilote values('9','PAUL','Rennes', 49, 3700);
+insert into pilote values('10','LUC','Rennes', 56, 7000);
