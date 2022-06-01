@@ -73,7 +73,8 @@ DECLARE
 BEGIN
     for rec in(
         SELECT object_name, object_type
-        FROM user_objects)LOOP
+        FROM user_objects
+        ORDER BY 2,1)LOOP
         DBMS_OUTPUT.put_line(rec.object_name || '   ' || rec.object_type); 
     END LOOP;
 
