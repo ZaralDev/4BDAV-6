@@ -146,3 +146,10 @@ TRUNCATE TABLE cli;
 
 
 -- EXERCICE 3 :
+
+-- 1. select FIRST_NAME, last_name, COMMISSION_PCT, DEPARTMENT_ID, HIRE_DATE, SALARY from employees 
+--    where commission_pct is not null and salary between '10000' and '15000' and hire_date <= '05/06/2005'
+-- 2. select department_id, AVG(salary), MEDIAN(salary), MIN(salary), MAX(salary) from employees group by department_id
+-- 3. select job_title, AVG(min_salary+max_salary)/2, MEDIAN(min_salary+max_salary)from jobs group by job_title 
+-- 4. select * from employees where job_id like 'IT%' and salary >= '6461'
+-- 5. select first_name, last_name, hire_date from employees
