@@ -61,7 +61,7 @@ BEGIN
     
     DBMS_OUTPUT.PUT_LINE('Il y a ' || v_manager || ' manager dans la table employees');
     
-    DBMS_OUTPUT.PUT_LINE('Il y a ' || v_manager*100/107 || '% de manger');
+    DBMS_OUTPUT.PUT_LINE('Il y a ' || v_manager*100/v_employees || '% de manger');
         
 END;
 
