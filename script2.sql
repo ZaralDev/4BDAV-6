@@ -1,5 +1,6 @@
 -- EXERCICE 1 :
-
+-- Déclaration bloc anonyme
+set serveroutput on;
 DECLARE
     v_countries int;
     v_departments int;
@@ -65,6 +66,8 @@ BEGIN
 END;
 
 -- EXERCICE 2 :
+-- Déclaration bloc anonyme
+set serveroutput on;
 DECLARE
    
      nom_objet  user_objects.object_name%TYPE;
