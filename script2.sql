@@ -125,3 +125,15 @@ insert into pilote values('7','QUENTIN','Rennes', 48, 4000);
 insert into pilote values('8','JEAN','Rennes', 52, 2500);
 insert into pilote values('9','PAUL','Rennes', 49, 3700);
 insert into pilote values('10','LUC','Rennes', 56, 7000);
+
+set serveroutput on;
+DECLARE
+    salaire_annuel int;
+    mean_salaire int;
+BEGIN
+    SELECT AVG(SALAIRE)
+    INTO mean_salaire
+    FROM PILOTE
+    WHERE AGE BETWEEN '45' AND '55';
+    DBMS_OUTPUT.put_line('Le salaire moyen des pilotes âgés entre 45 et 55 ans est de : ' || mean_salaire || '€');    
+END;
