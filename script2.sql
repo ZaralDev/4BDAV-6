@@ -9,7 +9,6 @@ DECLARE
     v_locations int;
     v_regions int;
     somme int; 
-    
     v_manager int;
     
 BEGIN
