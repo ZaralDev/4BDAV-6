@@ -66,3 +66,16 @@ BEGIN
 END;
 
 -- EXERCICE 2 :
+DECLARE
+   
+     nom_objet  user_objects.object_name%TYPE;
+     type_objet user_objects.object_type%TYPE;
+    
+BEGIN
+    for rec in(
+        SELECT object_name, object_type
+        FROM user_objects)LOOP
+        DBMS_OUTPUT.put_line(rec.object_name || '   ' || rec.object_type); 
+    END LOOP;
+
+END;
