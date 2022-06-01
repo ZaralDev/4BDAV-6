@@ -90,6 +90,22 @@ CREATE TABLE VOL (
     Date_heure_arrive TIMESTAMP,
     Ville_depart VARCHAR(30),
     Ville_arrive VARCHAR(30));
+    
+set serveroutput on;
+DECLARE
+    Idvol varchar2(100);
+    Date_heure_depart Date;
+    Date_heure_arrive Date;
+    Ville_depart varchar2(100);
+    Ville_arrive varchar2(100);
+    
+BEGIN
+    INSERT INTO VOL(Idvol, Date_heure_depart, Date_heure_arrive, Ville_depart, Ville_arrive) 
+    VALUES('BA270', TO_DATE('10:15:00', 'HH:MI:SS'), TO_DATE('12:15:00', 'HH:MI:SS'), 'Rome', 'Paris');
+END;
+/
+SELECT * FROM VOL;
+
 
 -- EXERCICE 4 : 
 CREATE TABLE PILOTE (
