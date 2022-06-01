@@ -85,6 +85,7 @@ END;
 
 --EXERCICE 3 :
 CREATE TABLE VOL (
+    Idvol VARCHAR(30),
     Date_heure_depart TIMESTAMP,
     Date_heure_arrive TIMESTAMP,
     Ville_depart VARCHAR(30),
