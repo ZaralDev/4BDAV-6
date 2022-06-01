@@ -84,6 +84,7 @@ BEGIN
 END;
 
 --EXERCICE 3 :
+-- création de la table
 CREATE TABLE VOL (
     Idvol VARCHAR(30),
     Date_heure_depart TIMESTAMP,
@@ -91,6 +92,7 @@ CREATE TABLE VOL (
     Ville_depart VARCHAR(30),
     Ville_arrive VARCHAR(30));
     
+-- Insert vol
 set serveroutput on;
 DECLARE
     Idvol varchar2(100);
@@ -108,6 +110,7 @@ SELECT * FROM VOL;
 
 
 -- EXERCICE 4 : 
+-- Création de la table
 CREATE TABLE PILOTE (
     Matricule VARCHAR(30),
     Nom VARCHAR(30),
@@ -115,6 +118,7 @@ CREATE TABLE PILOTE (
     Age NUMBER,
     Salaire NUMBER);
 
+-- Insert des données
 insert into pilote values('1','JEAN PAUL','Rennes', 45, 5000);
 insert into pilote values('2','JEAN LUC','Rennes', 50, 3500);
 insert into pilote values('3','LOUIS','Rennes', 35, 4800);
@@ -126,6 +130,7 @@ insert into pilote values('8','JEAN','Rennes', 52, 2500);
 insert into pilote values('9','PAUL','Rennes', 49, 3700);
 insert into pilote values('10','LUC','Rennes', 56, 7000);
 
+-- Moyenne salaire des pilotes entre 45 ans et 55 ans 
 set serveroutput on;
 DECLARE
     mean_salaire int;
@@ -136,3 +141,19 @@ BEGIN
     WHERE AGE BETWEEN '45' AND '55';
     DBMS_OUTPUT.put_line('Le salaire moyen des pilotes âgés entre 45 et 55 ans est de : ' || mean_salaire || '€');    
 END;
+
+-- Salaire annuel de chaque pilote
+set serveroutput on;
+DECLARE
+    nom_pilote pilote.nom%TYPE;
+    salaire_annuel pilote.salaire%TYPE;
+    
+BEGIN
+    for rec in(
+        SELECT NOM, SALAIRE
+        FROM PILOTE
+        ORDER BY 2,1)LOOP
+        DBMS_OUTPUT.put_line('Le salaire annuel de' || rec.nom || ' est de ' || rec.salaire*12 || '€'); 
+    END LOOP;
+END;
+/
