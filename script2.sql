@@ -82,3 +82,18 @@ BEGIN
     END LOOP;
 
 END;
+
+--EXERCICE 3 :
+CREATE TABLE VOL (
+    Date_heure_depart TIMESTAMP,
+    Date_heure_arrive TIMESTAMP,
+    Ville_depart VARCHAR(30),
+    Ville_arrive VARCHAR(30));
+
+-- EXERCICE 4 : 
+CREATE TABLE PILOTE (
+    Matricule VARCHAR(30),
+    Nom VARCHAR(30),
+    Ville VARCHAR(30),
+    Age NUMBER,
+    Salaire NUMBER);
