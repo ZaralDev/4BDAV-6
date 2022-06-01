@@ -128,7 +128,6 @@ insert into pilote values('10','LUC','Rennes', 56, 7000);
 
 set serveroutput on;
 DECLARE
-    salaire_annuel int;
     mean_salaire int;
 BEGIN
     SELECT AVG(SALAIRE)
