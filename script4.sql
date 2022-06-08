@@ -27,7 +27,7 @@
     { "Titre": "Skyfall",}
     
 -- 3eme document
-    {""Réalisateur": "Raoul Walsh"}
+    {"Réalisateur": "Raoul Walsh"}
     
     
 -- DBLP
@@ -224,7 +224,7 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Hadoop
- L'architecture Hadoop est composé des éléments suivants :
+/* L'architecture Hadoop est composé des éléments suivants :
     HDFS : le système de fichier distribué d’Apache Hadoop
     YARN : le gestionnaire de ressources et des tâches dans un cluster Hadoop
     MapReduce : un framework pour le traitement de grands ensembles de données en parallèle
@@ -265,4 +265,4 @@
                         présent dans le cluster Hadoop. Les régions de Region Server sont responsables de plusieurs choses, comme la gestion, la gestion, l’exécution 
                         ainsi que la lecture et l’écriture d’opérations HBase sur cet ensemble de régions. La taille par défaut d’une région est de 256 Mo. 
     Zookeeper : C’est comme un coordinateur dans HBase. Il fournit des services tels que la gestion des informations de configuration, le nommage, la synchronisation 
-                distribuée, la notification de panne de serveur, etc. Les clients communiquent avec les serveurs de la région via zookeeper. 
+                distribuée, la notification de panne de serveur, etc. Les clients communiquent avec les serveurs de la région via zookeeper. */
